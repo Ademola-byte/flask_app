@@ -59,7 +59,7 @@ def signup():
             db.session.commit()
                 
             flash("Account created successfully!", "success")
-            return redirect(url_for("home"))
+            return redirect(url_for("signup"))
         except Exception as e:
             db.session.rollback()
             app.logger.error(f"Database error: {str(e)}")
